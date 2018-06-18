@@ -72,6 +72,7 @@
     <validation.api.version>1.0.0.GA</validation.api.version>
     <gwtArgs></gwtArgs>
     <argLine>-Dgwt.args="${gwtArgs}"</argLine>
+    <gwt.groupId>net.wetheinter</gwt.groupId>
   </properties>
 
   <modules>
@@ -98,7 +99,7 @@
     <module>errai-codegen-gwt</module>
     <module>errai-cordova</module>
     <module>errai-ioc-bus-support</module>
-    <module>errai-bus-websocket</module>    
+    <module>errai-bus-websocket</module>
     <module>errai-jboss-as-support</module>
     <module>errai-security</module>
     <module>errai-demos</module>
@@ -182,13 +183,13 @@
           </excludes>
         </configuration>
       </plugin>
-      
+
       <plugin>
         <artifactId>maven-failsafe-plugin</artifactId>
         <configuration>
           <skipTests>true</skipTests>
         </configuration>
-      </plugin>    
+      </plugin>
 
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
@@ -258,8 +259,8 @@
               <rules>
                 <requirePluginVersions />
                 <DependencyConvergence />
-              </rules>              
-            </configuration>            
+              </rules>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -275,7 +276,7 @@
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
-          <artifactId>gwt-maven-plugin</artifactId>              
+          <artifactId>gwt-maven-plugin</artifactId>
           <version>2.8.1</version>
           <executions>
             <execution>
@@ -511,7 +512,7 @@
                   <background>true</background>
                 </configuration>
               </execution>
-                
+
               <execution>
                 <id>stop</id>
                 <phase>post-integration-test</phase>
@@ -671,7 +672,7 @@
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
             <version>1.0.b2</version>
-          </dependency>         
+          </dependency>
         </dependencies>
       </dependencyManagement>
     </profile>

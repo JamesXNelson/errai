@@ -127,13 +127,13 @@
         <!-- GWT -->
         <!-- Must come after errai-common is inherited for patched JUnitShell -->
         <dependency>
-          <groupId>com.google.gwt</groupId>
+          <groupId>${gwt.groupId}</groupId>
           <artifactId>gwt-user</artifactId>
           <scope>provided</scope>
         </dependency>
 
         <dependency>
-          <groupId>com.google.gwt</groupId>
+          <groupId>${gwt.groupId}</groupId>
           <artifactId>gwt-dev</artifactId>
           <scope>provided</scope>
         </dependency>
@@ -205,7 +205,7 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
               <excludes>
-                <exclude>com/google/gwt/junit/JUnitShell.java</exclude>
+                <exclude>${gwt.groupId}/junit/JUnitShell.java</exclude>
               </excludes>
             </configuration>
           </plugin>
@@ -266,7 +266,7 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
               <excludes>
-                <exclude>com/google/gwt/junit/JUnitShell.java</exclude>
+                <exclude>${gwt.groupId}/junit/JUnitShell.java</exclude>
               </excludes>
             </configuration>
           </plugin>
@@ -378,13 +378,13 @@
 
         <!-- GWT and GWT Extensions -->
         <dependency>
-          <groupId>com.google.gwt</groupId>
+          <groupId>${gwt.groupId}</groupId>
           <artifactId>gwt-user</artifactId>
           <scope>compile</scope>
         </dependency>
 
         <dependency>
-          <groupId>com.google.gwt</groupId>
+          <groupId>${gwt.groupId}</groupId>
           <artifactId>gwt-dev</artifactId>
           <scope>compile</scope>
         </dependency>

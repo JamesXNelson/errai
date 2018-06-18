@@ -8,12 +8,16 @@
   <artifactId>errai-jsinterop-demo</artifactId>
   <packaging>pom</packaging>
   <name>Errai::JSInterop::Demo::Parent</name>
-    
+
   <modules>
    <module>errai-jsinterop-demo-api</module>
    <module>errai-jsinterop-demo-plugin</module>
    <module>errai-jsinterop-demo-app</module>
   </modules>
+
+  <properties>
+    <gwt.groupId>net.wetheinter</gwt.groupId>
+  </properties>
 
   <!-- These must be here in this order because of missing guava-gwt snapshots in the JBoss Public Repository. -->
   <repositories>
@@ -39,7 +43,7 @@
       <url>https://oss.sonatype.org/content/repositories/public</url>
     </repository>
   </repositories>
-  
+
   <pluginRepositories>
     <pluginRepository>
       <id>public-snapshots-repo</id>

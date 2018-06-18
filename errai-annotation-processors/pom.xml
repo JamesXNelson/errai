@@ -24,7 +24,7 @@
     </dependency>
 
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>${gwt.groupId}</groupId>
       <artifactId>gwt-user</artifactId>
       <scope>test</scope>
     </dependency>

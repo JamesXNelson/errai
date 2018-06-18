@@ -90,16 +90,25 @@
     </dependency>
 
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>${gwt.groupId}</groupId>
       <artifactId>gwt-user</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>${gwt.groupId}</groupId>
       <artifactId>gwt-dev</artifactId>
       <!-- This should not be packaged with the Errai Distro. There are no runtime
                 dependencies on it and it breaks deployment on JBoss AS and Tomcat -->
       <scope>provided</scope>
+    </dependency>
+    <!--
+    While the main gwt branch explicitly depends on jetty,
+    some forks make these onerous dependencies optional
+    (see above comment about gwt-dev breaking JBoss AS and Tomcat)
+     -->
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-continuation</artifactId>
     </dependency>
 
     <dependency>

@@ -60,8 +60,8 @@
     <maven.war.plugin.version>2.1.1</maven.war.plugin.version>
     <maven.clean.plugin.version>2.4.1</maven.clean.plugin.version>
     <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
-    <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version> 
-    <maven.gwt.plugin.version>2.8.1</maven.gwt.plugin.version>   
+    <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
+    <maven.gwt.plugin.version>2.8.1</maven.gwt.plugin.version>
     <weld.version>2.3.3.Final</weld.version>
     <jetty.version>9.2.14.v20151106</jetty.version>
     <!-- Dev Mode config properties -->
@@ -69,6 +69,7 @@
     <as.version>10.0.0.Final</as.version>
     <!-- Add the absolute path for $JBOSS_HOME below to manage another instance -->
     <errai.jboss.home>${project.build.directory}/wildfly-${as.version}</errai.jboss.home>
+    <gwt.groupId>net.wetheinter</gwt.groupId>
   </properties>
 
   <repositories>
@@ -190,7 +191,7 @@
 
     <!-- GWT and GWT Extensions -->
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>${gwt.groupId}</groupId>
       <artifactId>gwt-user</artifactId>
       <scope>provided</scope>
     </dependency>
@@ -246,7 +247,7 @@
           <scope>provided</scope>
           <version>${project.version}</version>
         </dependency>
-        
+
         <dependency>
           <groupId>org.jboss.errai</groupId>
           <artifactId>errai-javax-enterprise</artifactId>
@@ -346,13 +347,13 @@
 
         <!-- GWT and GWT Extensions -->
         <dependency>
-          <groupId>com.google.gwt</groupId>
+          <groupId>${gwt.groupId}</groupId>
           <artifactId>gwt-user</artifactId>
           <scope>compile</scope>
         </dependency>
 
         <dependency>
-          <groupId>com.google.gwt</groupId>
+          <groupId>${gwt.groupId}</groupId>
           <artifactId>gwt-dev</artifactId>
           <scope>compile</scope>
         </dependency>
@@ -443,10 +444,10 @@
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
-        <artifactId>gwt-maven-plugin</artifactId> 
+        <artifactId>gwt-maven-plugin</artifactId>
         <version>${maven.gwt.plugin.version}</version>
         <configuration>
-          <noServer>false</noServer>          
+          <noServer>false</noServer>
           <strict>true</strict>
           <logLevel>INFO</logLevel>
           <runTarget>${errai.dev.context}</runTarget>
@@ -471,7 +472,7 @@
           </execution>
         </executions>
       </plugin>
-      <!-- Unpack jboss-as from maven. Remove this if you wish to use your 
+      <!-- Unpack jboss-as from maven. Remove this if you wish to use your
         own jboss/wildfly instance. -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

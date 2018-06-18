@@ -16,7 +16,7 @@
 
       <!-- GWT Dependencies -->
       <dependency>
-         <groupId>com.google.gwt</groupId>
+         <groupId>${gwt.groupId}</groupId>
          <artifactId>gwt-user</artifactId>
       </dependency>
 

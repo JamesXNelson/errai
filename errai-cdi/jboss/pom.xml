@@ -41,13 +41,13 @@
 
     <!-- GWT -->
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>${gwt.groupId}</groupId>
       <artifactId>gwt-user</artifactId>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.google.gwt</groupId>
+      <groupId>${gwt.groupId}</groupId>
       <artifactId>gwt-dev</artifactId>
       <exclusions>
         <!-- Contains a ServletContainerInitializer that breaks the EmbeddedWildfFlyLauncher -->
@@ -56,6 +56,15 @@
           <artifactId>apache-jsp</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <!--
+    While the main branch of GWT explicitly depends on this (through HtmlUnit),
+    some forks make these onerous dependencies optional, and some projects
+    (like Errai) have unknowingly used these dependencies because they were available
+     -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
     </dependency>
   </dependencies>
 
